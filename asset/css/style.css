@@ -1,0 +1,130 @@
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+input:focus, textarea:focus, button:focus, .btn:focus {
+  box-shadow: none !important;
+}
+
+/* ===== Header ===== */
+.navbar {
+  box-shadow: 2px 2px 5px #3292a6;
+  background: #fff;
+  opacity: 0.9;
+}
+.navbar img {
+  width: 50px;
+  height: 50px;
+}
+.navbar .nav-item {
+  text-transform: capitalize;
+}
+.navbar .nav-item .nav-link:hover {
+  color: #3292a6;
+}
+.navbar .nav-item a.active {
+  color: #3292a6 !important;
+}
+
+/* ===== Home ===== */
+#home .upper {
+  background: url("../img/mountain.jpg") no-repeat fixed center top/cover;
+}
+#home .upper .overlay {
+  background-color: rgba(50, 146, 166, 0.7);
+  padding: 165px 0 90px;
+}
+@media screen and (min-width: 992px) {
+  #home .upper .overlay {
+    padding: 65px 0 0;
+  }
+}
+#home .subscribe .btn-outline-light {
+  border-color: #3292a6;
+}
+#home .subscribe .btn-outline-light:hover {
+  background-color: #3292a6;
+  color: #fff;
+}
+
+/* ===== About ===== */
+#about h2 {
+  color: #3292a6;
+}
+#about .accordion-button:not(.collapsed) {
+  color: #fff;
+  background-color: #3292a6;
+}
+#about .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='fff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+/* ===== Meet the Author ===== */
+#mta h2 {
+  color: #3292a6;
+}
+#mta .pt-5 {
+  padding-top: 6rem !important;
+}
+@media screen and (min-width: 576px) {
+  #mta .pt-sm-0 {
+    padding-top: 0 !important;
+  }
+}
+@media screen and (min-width: 992px) {
+  #mta .pt-lg-0 {
+    padding-top: 0 !important;
+  }
+}
+#mta .card:hover {
+  background-color: #3292a6;
+  color: #fff;
+}
+#mta .card:hover a {
+  color: #fff !important;
+}
+#mta .card .card-body img {
+  width: 115px;
+  height: 115px;
+}
+#mta .card .card-body h3 {
+  padding-top: 4rem !important;
+}
+#mta .card .card-body a {
+  color: #3292a6;
+  transition: transform 0.3s;
+}
+#mta .card .card-body a:hover {
+  display: inline-block;
+  transform: scale(1.2);
+}
+
+/* ===== Contact ===== */
+#contact h2 {
+  color: #3292a6;
+}
+#contact .input-group .input-group-text {
+  min-width: 42px;
+  background-color: #3292a6;
+  color: #fff;
+}
+#contact .input-group textarea {
+  resize: none;
+}
+#contact .btn-outline-dark {
+  border-color: #3292a6;
+}
+#contact .btn-outline-dark:hover {
+  background-color: #3292a6;
+  color: #fff;
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: auto;
+  background-color: #3292a6;
+}
+
+/*# sourceMappingURL=style.css.map */

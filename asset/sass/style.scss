@@ -1,0 +1,174 @@
+@import "variable";
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+input, textarea, button, .btn {
+  &:focus {
+    box-shadow: none !important;
+  }
+}
+
+/* ===== Header ===== */
+.navbar {
+  box-shadow: 2px 2px 5px $primary-color;
+  background: $secondary-color;
+  opacity: 0.9;
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-item {
+    text-transform: capitalize;
+
+    .nav-link {
+      &:hover {
+        color: $primary-color;
+      }
+    }
+
+    a.active {
+      color: $primary-color !important;
+    }
+  }
+}
+
+/* ===== Home ===== */
+#home {
+  .upper {
+    background: url("../img/mountain.jpg") no-repeat fixed center top / cover;
+
+    .overlay {
+      background-color: rgba($primary-color, 0.7);
+      padding: 165px 0 90px;
+
+      @media screen and (min-width: 992px) {
+        padding: 65px 0 0;
+      }
+    }
+  }
+
+  .subscribe {
+    .btn-outline-light {
+      border-color: $primary-color;
+
+      &:hover {
+        background-color: $primary-color;
+        color: $secondary-color;
+      }
+    }
+  }
+}
+
+/* ===== About ===== */
+#about {
+  h2 {
+    color: $primary-color;
+  }
+
+  .accordion-button {
+    &:not(.collapsed) {
+      color: $secondary-color;
+      background-color: $primary-color;
+
+      &::after {
+        $sl-sc: str-slice("#{$secondary-color}", 2, 4);
+        background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='#{$sl-sc}'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+      }
+    }
+  }
+}
+
+/* ===== Meet the Author ===== */
+#mta {
+  h2 {
+    color: $primary-color;
+  }
+
+  .pt-5 {
+    padding-top: 6rem !important;
+  }
+
+  @media screen and (min-width: 576px) {
+    .pt-sm-0 {
+      padding-top: 0 !important;
+    }
+  }
+
+  @media screen and (min-width: 992px) {
+    .pt-lg-0 {
+      padding-top: 0 !important;
+    }
+  }
+
+  .card {
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+
+      a {
+        color: $secondary-color !important;
+      }
+    }
+
+    .card-body {
+      img {
+        width: 115px;
+        height: 115px;
+      }
+
+      h3 {
+        padding-top: 4rem !important;
+      }
+
+      a {
+        color: $primary-color;
+        transition: transform 0.3s;
+
+        &:hover {
+          display: inline-block;
+          transform: scale(1.2);
+        }
+      }
+    }
+  }
+}
+
+/* ===== Contact ===== */
+#contact {
+  h2 {
+    color: $primary-color;
+  }
+
+  .input-group {
+    .input-group-text {
+      min-width: 42px;
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+
+    textarea {
+      resize: none;
+    }
+  }
+
+  .btn-outline-dark {
+    border-color: $primary-color;
+
+    &:hover {
+      background-color: $primary-color;
+      color: $secondary-color;
+    }
+  }
+}
+
+/* ===== Footer ===== */
+footer {
+  margin-top: auto;
+  background-color: $primary-color;
+}
